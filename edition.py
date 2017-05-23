@@ -12,4 +12,4 @@ image1.rotate(-90).save('rotated.jpg')
 image1.convert(mode="L").save('black_white.jpg')
 
 # Blur my Image
-image1.filter(ImageFilter.GaussianBlur()).save('blur.jpg')
+image1.filter(ImageFilter.GaussianBlur(15)).save('blur.jpg')
