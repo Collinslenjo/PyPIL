@@ -1,12 +1,15 @@
 '''
 Continue manipulating the images
 '''
-from PIL import Image
+from PIL import Image, ImageFilter
 import os
 
 # Rotation of imades
 image1 = Image.open('Imgs/carrot.jpg')
-image1.rotate(-90).save('pup1_mod.jpg')
+image1.rotate(-90).save('rotated.jpg')
 
 #make the image black and white
-image1.convert(mode="L").save('pup1_mod.jpg')
+image1.convert(mode="L").save('black_white.jpg')
+
+# Blur my Image
+image1.filter(ImageFilter.GaussianBlur()).save('blur.jpg')
